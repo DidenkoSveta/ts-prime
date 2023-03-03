@@ -1,0 +1,477 @@
+$white: #FFFFFF
+$orange: #F47E51
+$red: #EC6A6A
+$gradient: linear-gradient(210.11deg, #EC6A6A 5.87%, #F47E51 90.46%)
+$black: #2F3338
+$grey: #F1F0F0
+$wgrey: #FAFAFA
+*
+   box-sizing: border-box
+   margin: 0
+   padding: 0
+button
+   border-radius: 30px
+   height: 51px
+   @media (max-width: 1230px)
+      font-size: 15px
+body
+   background-color: $white
+   width: 100vw
+   color: $black
+   font-family: Roboto
+   overflow-x: hidden
+a
+   font-family: Roboto
+   text-decoration: none
+   color: $black
+   text-decoration: none
+li
+   list-style-type: none
+hr
+   max-width: 1440px
+   heigth: 1px
+   border: 1px solid rgba(47, 51, 56, 0.3)
+   margin: 80px auto
+   @media (max-width: 1400px)
+      margin: 60px auto
+   @media (max-width: 1230px)
+      margin: 40px auto
+header
+   display: flex
+   justify-content: space-between
+   align-items: center
+   background-color: $wgrey
+   width: 100vw
+   position: fixed
+   top: 0
+   z-index: 10
+   @media (max-width: 1024px)
+      border-bottom: 1px solid rgba(244, 126, 81, 0.5)
+.header__block
+   margin: 0 auto
+   max-width: 1440px
+   overflow-x: hidden
+   background-color: $wgrey
+   height: 100px
+   display: flex
+   align-items: center
+   justify-content: space-between
+   flex-wrap: wrap
+   align-content: center
+   padding: 0 100px
+   @media (max-width: 1400px)
+      max-width: 1400px
+      padding: 0 80px
+      height: 90px
+   @media (max-width: 1230px)
+      max-width: 1230px
+      padding: 0 30px
+   @media (max-width: 1024px)
+      max-width: 1024px
+      height: 80px
+      padding: 0 20px
+   @media (max-width: 740px)
+      width: 428px
+   &-menu
+      display: flex
+      max-width: 770px
+      justify-content: space-between
+      @media (max-width: 1230px)
+         max-width: 900px
+         align-items: center
+      @media (max-width: 1024px)
+         max-width: 60vw
+         flex-direction: row-reverse
+   &-lists
+      display: flex
+      width: 540px
+      justify-content: space-between
+      flex-wrap: wrap
+      align-items: center
+      @media (max-width: 1230px)
+         width: 470px
+      @media (max-width: 1024px)
+         flex-direction: column
+   &-list
+      font-style: normal
+      font-weight: 600
+      font-size: 16px
+      line-height: 28px
+      align-items: center
+      text-transform: uppercase
+      @media (max-width: 1230px)
+         font-size: 15px
+   &-logo
+      background-size: cover
+      background-repeat: no-repeat
+      height: 36px
+      @media (max-width: 1230px)
+         position: relative
+         height: 30px
+         top: -3px
+      @media (max-width: 1024px)
+.header__block-lists
+   li
+      a:hover
+         animation-duration: 3s
+         animation-name: show
+         animation-iteration-count: 3
+         color: $orange
+         @keyframes show
+            0%
+               opacity: 0.8
+            100%
+               opacity: 1
+      a:active
+         color: $orange
+.button__feedback
+   padding: 15px 27px
+   width: 200px
+   border-radius: 30px
+   color: $wgrey
+   background-color: $orange
+   border: none
+   white-space: nowrap
+   @media (max-width: 1230px)
+      width: 170px
+      display: flex
+      justify-content: center
+      font-size: 15px
+.header__burger
+   margin-left: auto
+   margin-right: 25px
+.burger
+   display: none
+   width: 60px
+   height: 37px
+   background-size: cover
+   background-repeat: no-repeat
+   border-radius: 0px
+   background: url("../assets/svg/burger-menu.svg")
+   border: none
+   z-index: 11
+   @media (max-width: 1024px)
+      display: block
+   @media (max-width: 740px)
+      width: 52px
+      height: 32px
+      background-size: contain
+.burger:hover
+   cursor: pointer
+.close
+   display: none
+   width: 46px
+   height: 46px
+   margin-top: 20px
+   margin-left: 20px
+   background: url("../assets/svg/close-menu.svg")
+   background-size: contain
+   background-repeat: no-repeat
+   @media (max-width: 1024px)
+      display: block
+      border: none
+.close:hover
+   cursor: pointer
+.navigation__header
+   @media (max-width: 1024px)
+      position: fixed
+      height: 100vh
+      width: 60vw
+      top: 10px
+      z-index: 12
+      background: $wgrey
+      transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6)
+      transform: translateX(1000px)
+      transition: all 0.6s ease
+.navigation__header.show
+   transform: translateX(100px)
+   transition: all 0.6s ease
+#button-head
+   @media (max-width: 740px)
+      display: none
+main
+   position: relative
+   top: 200px
+   margin: 0 auto
+   @media (max-width: 1024px)
+      display: flex
+      flex-direction: column
+      align-content: center
+.slogan
+   display: flex
+   width: 1440px
+   margin: -100px auto 0px
+   padding: 0 100px
+   max-height: 900px
+   overflow: hidden
+   justify-content: space-between
+   @media (max-width: 1400px)
+      max-height: 810px
+      width: 1240px
+      padding: 0 80px
+      margin: -120px auto 0px
+   @media (max-width: 1230px)
+      max-height: 810px
+      width: 1024px
+      padding: 0 30px
+      margin: -120px auto 0px
+   @media (max-width: 1024px)
+      width: 744px
+      max-height: 1055px
+      flex-direction: column
+      align-items: center
+      margin: -180px auto 0px
+      padding: 0 20px
+.block__slogan
+   max-width: 590px
+   margin-top: 60px
+   @media (max-width: 1024px)
+      min-width: 744px
+      padding: 0px 20px
+      max-height: 400px
+      position: relative
+      z-index: 2
+      background-color: $white
+   @media (max-width: 740px)
+      min-width: 740px
+      max-height: 600px
+   h1
+      font-weight: 700
+      font-size: 48px
+      line-height: 57px
+      margin-bottom: 120px
+      @media (max-width: 1400px)
+         font-size: 40px
+         margin-bottom: 100px
+         max-width: 470px
+      @media (max-width: 1230px)
+         font-size: 36px
+         margin-bottom: 70px
+         max-width: 420px
+      @media (max-width: 1024px)
+         margin-bottom: 40px
+         max-width: 625px
+      @media (max-width: 740px)
+         font-size: 28px
+         margin-bottom: 10px
+         max-width: 380px
+         line-height: 40px
+      span
+         color: $orange
+   &-background
+      @media (max-width: 740px)
+         width: 100vw
+         background-color: $white
+   &-text
+      @media (max-width: 1024px)
+         width: 700px
+         display: flex
+         font-size: 20px
+         flex-wrap: wrap
+         justify-content: space-between
+      @media (max-width: 740px)
+         display: flex
+         width: 380px
+      h3
+         white-space: nowrap
+         @media (max-width: 1024px)
+            width: 350px
+         @media (max-width: 740px)
+            width: 190px
+            font-size: 15px
+   &-feedback
+      text-align: center
+   &-btn
+      display: flex
+      width: 240px
+      background-color: $wgrey
+      border: 3px solid
+      font-weight: 600
+      font-size: 16px
+      line-height: 28px
+      margin-left: 25px
+      align-items: center
+      justify-content: center
+      @media (max-width: 1400px)
+         margin-left: 15px
+      @media (max-width: 1230px)
+         width: 220px
+         font-size: 15px
+         line-height: 25px
+      img
+         margin-right: 5px
+         margin: auto 5px
+         @media (max-width: 1230px)
+            width: 23px
+            height: 19px
+   &-btns
+      display: flex
+      margin-top: 120px
+      flex-wrap: wrap
+      justify-content: flex-start
+      align-items: center
+      @media (max-width: 1024px)
+         margin-top: 30px
+         margin-bottom: 40px
+.slogan-text
+   display: flex
+   align-items: center
+   justify-content: flex-start
+   font-weight: 700
+   font-size: 32px
+   line-height: 54px
+   @media (max-width: 1400px)
+      font-size: 28px
+   @media (max-width: 1230px)
+      font-size: 24px
+      @media (max-width: 740px)
+         font-size: 16px
+.slogan-text::after
+   content: ""
+   display: block
+   position: relative
+   background: url("../assets/svg/arrow.svg")
+   color: $orange
+   width: 60px
+   height: 30px
+   background-size: contain
+   background-repeat: no-repeat
+   margin-left: 10px
+   @media (max-width: 1230px)
+      width: 30px
+      height: 15px
+   @media (max-width: 740px)
+      display: none
+.block__slider
+   display: flex
+   position: relative
+   top: -120px
+   z-index: 1
+   gap: 3vw
+   animation-duration: 25s
+   animation-name: slide
+   animation-iteration-count: infinite
+   animation-timing-function: linear
+   margin-right: 0px
+   @media (max-width: 1400px)
+      top: -100px
+   @media (max-width: 1230px)
+      top: -80px
+   @media (max-width: 1024px)
+      height: 650px
+      width: 670px
+      top: 0px
+      z-index: -1
+      display: flex
+      justify-content: space-between
+   &-left
+      position: relative
+      top: 160px
+@keyframes slide
+   0%
+      transform: translateY(0)
+   100%
+      transform: translateY(-1200px)
+.block__slider-card
+   display: flex
+   gap: 60px
+   flex-direction: column
+   @media (max-width: 1400px)
+      gap: 50px
+   @media (max-width: 1230px)
+      gap: 40px
+   @media (max-width: 1024px)
+      gap: 60px
+   img
+      height: 320px
+      width: 320px
+      @media (max-width: 1400px)
+         height: 280px
+         width: 280px
+      @media (max-width: 1230px)
+         height: 250px
+         width: 250px
+      @media (max-width: 1024px)
+         height: 320px
+         width: 320px
+h2
+   margin-bottom: 50px
+   font-weight: 700
+   font-size: 48px
+   line-height: 57px
+   @media (max-width: 1400px)
+      font-size: 40px
+   @media (max-width: 1230px)
+      font-size: 36px
+      margin-bottom: 40px
+   @media (max-width: 1024px)
+      margin-bottom: 30px
+   span
+      color: $orange
+.service
+   width: 1440px
+   overflow-x: hidden
+   box-sizing: border-box
+   margin: 0 auto
+   padding: 80px 100px
+   @media (max-width: 1400px)
+      width: 1240px
+      padding: 80px 80px
+   @media (max-width: 1230px)
+      width: 1024px
+      padding: 40px 30px
+   @media (max-width: 1024px)
+      width: 703px
+      padding: 40px 20px
+   &__block
+      display: flex
+      gap: 3vw
+      flex-wrap: wrap
+      justify-content: center
+      @media (max-width: 1400px)
+         gap: 3vw
+      @media (max-width: 1230px)
+         gap: 1vw
+      @media (max-width: 1024px)
+         justify-content: space-between
+      &-card
+         display: flex
+         flex-direction: column
+         align-items: center
+         font-weight: 600
+         font-size: 16px
+         line-height: 19px
+         background-color: $white
+         padding: 30px 30px 13px
+         width: 180px
+         height: 180px
+         box-shadow: 0px 4px 15px rgba(47, 51, 56, 0.1), 0px 4px 15px rgba(236, 106, 106, 0.2)
+         border-radius: 15px
+         text-align: center
+         transition: transform 1s
+         transform-style: preserve-3d
+         img
+            margin-bottom: 20px
+            height: 50px
+            width: 50px
+.service__block-card:hover
+   transform: rotateY(180deg)
+   cursor: pointer
+.card-face
+   display: flex
+   flex-direction: column
+   align-items: center
+   position: relative
+   top: 0
+   bottom: 0
+   backface-visibility: hidden
+.card-face.back
+   display: flex
+   justify-content: center
+   position: absolute
+   vertical-align: middle
+   font-size: 14px
+   font-weight: 600
+   padding: 20px 10px
+   color: $black
+   transform: rotateY(180deg)
